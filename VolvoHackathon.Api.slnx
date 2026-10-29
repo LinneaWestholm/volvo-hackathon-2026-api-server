@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/VolvoHackathon.Api/VolvoHackathon.Api.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,27 @@
+@VolvoHackathon.Api_HostAddress = http://localhost:5137
+
+### Next summary for the web app (empty summary if nothing is waiting) and all agent statuses
+GET {{VolvoHackathon.Api_HostAddress}}/api/factory
+Accept: application/json
+
+### Send a summary to the web app's chat
+POST {{VolvoHackathon.Api_HostAddress}}/api/factory
+Content-Type: application/json
+
+{
+  "summary": "Agent 3: Line B stopped for maintenance."
+}
+
+### Set whether all 5 agents are running (index 0 = Agent 1)
+PUT {{VolvoHackathon.Api_HostAddress}}/api/factory/agents
+Content-Type: application/json
+
+[true, true, true, false, true]
+
+### Set whether one agent is running (3 = Agent 4)
+PUT {{VolvoHackathon.Api_HostAddress}}/api/factory/agents/3
+Content-Type: application/json
+
+true
+
+###
